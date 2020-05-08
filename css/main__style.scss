@@ -1,0 +1,85 @@
+.main__section{
+	width: 100%;
+	height: 1000px;
+	margin-top: 100px;
+	& .project{
+		background-color: #88d0da;
+		padding: 20px;
+		margin-bottom: 50px;
+		& .main__title{
+				font-size: 70px;
+				color: #fff;
+				font-weight: 700;
+				margin: 100px auto;
+				@media(max-width: 600px){
+					margin-top: 40px;
+					margin-bottom: 40px;
+					font-size: 40px;
+			}
+			}
+		& .project__main{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			& .main__director{
+				& .director__name{
+					color: #fff;
+					font-size: 30px;
+					padding-bottom: 20px;
+				}
+				& .director__img{}
+			}
+		
+			& .main__about{
+				font-size: 25px;
+				color: #fff;
+				text-align: left;
+				margin-left: 30px;
+				@media(max-width: 600px){
+					font-size: 15px;
+				}
+				& a{
+					font-size: 30px;
+					color: #fff;
+					& :hover{
+						color: green;
+					}
+			}
+		}}
+		& .poloska_money{
+			display: block;
+			content: '';
+			width: 50%;
+			height: 30px;
+			background-color: #fff;
+			margin:50px auto;
+			& div{
+				display: block;
+				content: '';
+				height: 15px;
+				background-color: red;
+
+			}
+		}
+	}
+	& .project__list{
+		background-color: #588288;
+		padding: 20px;
+		color:#fff;
+		font-size: 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 50px;
+		& .list__item{
+			padding-bottom: 30px;
+		}
+		& .title__list{
+			padding: 10px;
+		}
+	}
+}
+.activety{
+	background-color: #384c4f;
+}
+

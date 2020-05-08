@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue</title>
+	<link rel="stylesheet" href="css/style__list.css">
+	<link rel="stylesheet" href="css/burger-style.css">
+	<link rel="stylesheet" href="css/main__style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,900&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="js/burger-script.js"></script>
+</head>
+<body>
+ <div class="wrapper">
+ 	<div class="page">
+ 		<header>
+			<div class="container">
+	 			<div class="header__body">
+	 				<a class="header__logo"><img src="img/logo.png" alt="" width="80px"></a>
+	 				<div class="header__burger">
+						<span></span>
+					</div>
+	 				<nav class="header__menu">
+	 					<ul class="header__list">
+	 						<li><a href="#" class="header__link">Home</a></li>
+	 						<li><a href="list_people.html" class="header__link">People</a></li>
+	 						<li><a href="#foot" class="header__link">Contact</a></li>
+	 					</ul>
+	 				</nav>
+	 				<div class="login">
+	 					<button class="header__btn" v-on:click="visible=!visible">{{visible?'Login':'Sign in to your account'}}</button>
+	 					<form v-show="!visible">
+	 						<input type="text" placeholder="email">
+	 						<input type="password" placeholder="password" >
+	 					</form>
+	 				</div>
+	 			</div>
+	 		</div>
+ 		</header>
+		<section class="main__section" id="proj">
+			<div class="container">
+				<div class="project">
+					<div class="main__title">{{project.title}}</div>
+						<div class="project__main">
+							<div class="main__director">
+								<div class="director__name">Director: {{project.name}}</div>
+								<div class="director__img"><img v-bind:src="project.image" alt="" width="160px"></div>
+							</div>
+							<div class="main__about">{{project.about}}<a href="#">More>></a></div>
+						</div>
+					<div class="poloska_money" >Progress: {{project.poloska}} %<div v-bind:style="{ width: activeColor + '%'}"></div></div>
+				</div>
+				<div class="project__list">
+					<div class="list__item" v-for="(project, index) in projects" v-on:click="selectProject(index)" 
+					:class="{'activety': selectedIndex === index}">
+						<div class="title__list">{{project.title}}</div>
+						<div class="list__img"><img v-bind:src="project.image" alt="" width="50px"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+	 	<footer id="foot">
+	 		<div class="container">
+	 			<div class="footer">
+	 				<ul class="footer__link">
+	 					<li><a href="#">Телефон: +7 (495) 000-00-00</a></li>
+	 					<li><a href="#">email: saartapa@sk.ru</a></li>
+	 					<li><a href="#">© Startup 2020. All rights reserved</a></li>
+	 					<li><a href="#">Free registration</a></li>
+	 				</ul>
+	 				<button>Donate</button>
+	 			</div>
+	 		</div>
+	 	</footer>
+ </div>
+</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/list_project.js"></script>
+</body>
+</html>
