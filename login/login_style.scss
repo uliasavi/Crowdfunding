@@ -1,0 +1,57 @@
+section{
+
+.auth{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		h2{
+			font-size: 27px;
+			font-weight: 600;
+			padding: 20px;
+		}
+		.auth__form, .log__in{
+			flex: 40%;
+			border: 1px solid #333;
+			margin-right: 5%;
+			padding: 10px;
+			margin-bottom: 50px;
+			background-color: #6db38c;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			text-align: left;
+				form{
+					display: flex;
+					justify-content: space-between;
+					flex-direction: column;
+					div{
+						padding-bottom: 10px;
+						color: red;
+					}
+					label{
+						font-size: 20px;
+						font-weight: 700;
+						padding: 3%;
+
+						&:hover{
+							color: #64753c;
+						}
+					}
+					input{
+						width: 100%;
+						margin: 5% 0px;
+						padding: 10px;
+					}
+					button{
+						font-size: 20px;
+						font-weight: 700;
+						border-radius: 10px;
+						padding: 5px 10px;
+						width: 80%;
+					}
+				}
+		}
+	}
+}

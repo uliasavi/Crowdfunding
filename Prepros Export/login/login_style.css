@@ -1,0 +1,67 @@
+section .auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  section .auth h2 {
+    font-size: 27px;
+    font-weight: 600;
+    padding: 20px; }
+  section .auth .auth__form, section .auth .log__in {
+    -webkit-box-flex: 40%;
+    -ms-flex: 40%;
+    flex: 40%;
+    border: 1px solid #333;
+    margin-right: 5%;
+    padding: 10px;
+    margin-bottom: 50px;
+    background-color: #6db38c;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: left; }
+    section .auth .auth__form form, section .auth .log__in form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      section .auth .auth__form form div, section .auth .log__in form div {
+        padding-bottom: 10px;
+        color: red; }
+      section .auth .auth__form form label, section .auth .log__in form label {
+        font-size: 20px;
+        font-weight: 700;
+        padding: 3%; }
+        section .auth .auth__form form label:hover, section .auth .log__in form label:hover {
+          color: #64753c; }
+      section .auth .auth__form form input, section .auth .log__in form input {
+        width: 100%;
+        margin: 5% 0px;
+        padding: 10px; }
+      section .auth .auth__form form button, section .auth .log__in form button {
+        font-size: 20px;
+        font-weight: 700;
+        border-radius: 10px;
+        padding: 5px 10px;
+        width: 80%; }

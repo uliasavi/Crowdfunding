@@ -5,6 +5,7 @@
 	<title>Vue</title>
 	<link rel="stylesheet" href="css/style__list.css">
 	<link rel="stylesheet" href="css/burger-style.css">
+	<link rel="stylesheet" href="css/main__style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,900&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
@@ -22,41 +23,39 @@
 					</div>
 	 				<nav class="header__menu">
 	 					<ul class="header__list">
-	 						<li><a href="main.html" class="header__link">Home</a></li>
-	 						<li><a href="#list__section" class="header__link">People</a></li>
+	 						<li><a href="#" class="header__link">Home</a></li>
+	 						<li><a href="list_people.html" class="header__link">People</a></li>
 	 						<li><a href="#foot" class="header__link">Contact</a></li>
 	 					</ul>
 	 				</nav>
 	 				<div class="login">
-	 					<a href="login/login.html" class="header__btn">Login</a>
+	 					<a  href="login/login.html" class="header__btn">Login</a>
 	 				</div>
 	 			</div>
 	 		</div>
  		</header>
-	 	<section id="list__section">
-	 		<div class="container">
-	 			<h1>Participants</h1>
-	 			<input 
-	 			type="text" 
-	 			id="search" 
-	 			placeholder="name, age, country, work place"
-	 			v-model="search"
-	 			>
-				<div class="people">
-					<div class="people__item" v-for="man in filterMans">
-						<div class="people__img"><a href="#"><img v-bind:src="man.image" alt="" width="200px"></a></div>
-						<ul class="people__text">
-							<li class="people__name">name:<span> {{man.name}}</span></li>
-							<li class="people__age">age: <span>{{man.age}}</span></li>
-							<li class="people__country">country:<span>{{man.country}}</span></li>
-							<li class="people__work">work: <span>{{man.work}}</span></li>
-							<li class="people__about">about: <span>{{man.about}}</span></li>
-						</ul>
+		<section class="main__section" id="proj">
+			<div class="container">
+				<div class="project">
+					<div class="main__title">{{project.title}}</div>
+						<div class="project__main">
+							<div class="main__director">
+								<div class="director__name">Director: {{project.name}}</div>
+								<div class="director__img"><img v-bind:src="project.image" alt="" width="160px"></div>
+							</div>
+							<div class="main__about">{{project.about}}<a href="#">More>></a></div>
+						</div>
+					<div class="poloska_money" >Progress: {{project.poloska}} %<div v-bind:style="{ width: activeColor + '%'}"></div></div>
+				</div>
+				<div class="project__list">
+					<div class="list__item" v-for="(project, index) in projects" v-on:click="selectProject(index)" 
+					:class="{'activety': selectedIndex === index}">
+						<div class="title__list">{{project.title}}</div>
+						<div class="list__img"><img v-bind:src="project.image" alt="" width="50px"></div>
 					</div>
 				</div>
-	 		</div>
-	 	</section>
-	 	<footer id="foot">
+			</div>
+			<footer id="foot">
 	 		<div class="container">
 	 			<div class="footer">
 	 				<ul class="footer__link">
@@ -69,11 +68,13 @@
 	 			</div>
 	 		</div>
 	 	</footer>
+		</section>
+	 	
  </div>
 </div>
 
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="js/main.js"></script>
-	<script src="js/list.js"></script>
+	<script src="js/list_project.js"></script>
 </body>
 </html>
